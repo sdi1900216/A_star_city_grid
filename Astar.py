@@ -54,7 +54,7 @@ def a_star_search(grid, start, goal):
             if 0 <= neighbor[0] < rows and 0 <= neighbor[1] < cols:
                 cost = terrain_cost[grid[neighbor[0]][neighbor[1]]]
 
-                if cost == float('inf'):
+                if cost == 9999:
                     continue
 
                 tentative_g_score = g_score[current] + cost
@@ -89,7 +89,7 @@ goal_pos = (9, 7)
 total_cost, nodes_expanded, fringe_order = a_star_search(city_grid, start_pos, goal_pos)
 
 print(f"\nΣυνολικό κόστος διαδρομής: {total_cost}")
-print(f"Αριθμός επεκτεινόμενων κόμβων: {nodes_expanded}")
-print("Σειρά κόμβων από τη λίστα 'σύνορο':")
+print(f"Αριθμός επεκτεινόμενων k;omόμβων: {nodes_expanded}")
+print("Σειρά κόμβων από to fringe:")
 for node in fringe_order:
     print(node)
