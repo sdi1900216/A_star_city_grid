@@ -3,9 +3,9 @@ import heapq
 terrain_cost = {
     'R': 1,
     'H': 0.5,
-    'B': float('inf'),
+    'B': 9999,
     'P': 2,
-    'W': float('inf'),
+    'W': 9999,
     'S': 0,
     'G': 0
 }
